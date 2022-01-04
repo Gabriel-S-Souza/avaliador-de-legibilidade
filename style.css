@@ -1,0 +1,23 @@
+html, body{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+textarea {
+    height: 10em;
+    width: 26em;
+}
+
+output {
+    font-size: 24px;
+}

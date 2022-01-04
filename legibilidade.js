@@ -14,17 +14,21 @@ function readabilityChecker(text) {
         for (let i = 0; i < text.length; i++) {
             if (isAlpha(text[i])){      
                 letters++
-                console.log(`Letters ${letters}`)
+                
             }
             if (text[i] == " " && isAlpha(text[i + 1])) {
                 words++
-                console.log(`Words ${words}`)
+                
             }
             if ((text[i] == "." || text[i] == "!" || text[i] == "?") && (isAlpha(text[i + 1]) || text[i + 1] == " ")) {
                 phrases++
-                console.log(`Phrases ${phrases}`)
+                
             }
         }
+        const averageLetters = letters / words * 100
+        const averagePhrases = phrases / words * 100
+        const colemanLiauIndex = (0.0588 * averageLetters) - (0.296 * averagePhrases) - 15.8
+        return converterToSeries(colemanLiauIndex)
     }
 }
 
@@ -33,5 +37,27 @@ function isAlpha(char) {
     (char >= "a" && char <= "z" || char >= "A" && char <= "Z" || char === "ç" || char === "Ç")
 }
 
-// split() isto pode ser usado para subdividir o texto. 
-// Posso usar o " " para dividir as palavras e conta-las.
+function converterToSeries(colemanLiauIndex){
+    console.log(Math.round(colemanLiauIndex))
+    let i = 0
+    if (Math.round(colemanLiauIndex) < 0.5) {
+        console.log(Math.round(colemanLiauIndex))
+        return `Pré-escola`
+    }
+    else {
+        for (i = 0; ; i++){
+            if (Math.round(colemanLiauIndex) == i && i <= 9) {
+                return `${i}° ano do Ensino Fundamental`
+            }
+            else if (Math.round(colemanLiauIndex) == i && i <= 12) {
+                return `${i - 9}° ano do Ensino Médio`
+            }
+            else if (Math.round(colemanLiauIndex) == i && i <= 16) {
+                return `${i - 12}° ano da Faculdade`
+            }
+            else if (Math.round(colemanLiauIndex) == i && i > 16) {
+                return `Pós-graduação`
+            }
+        }
+    }
+}

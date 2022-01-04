@@ -1,3 +1,7 @@
+html {
+    background-color: #D8E4FF;
+}
+
 html, body{
     display: flex;
     height: 100%;
@@ -11,6 +15,11 @@ main {
     justify-content: center;
     align-items: center;
     margin: auto;
+    padding: 1em;
+    background-color: #fff;
+    border: 1px solid #1F271B;
+    border-radius: 8px;
+    font-family: monospace, Courier;
 }
 
 textarea {

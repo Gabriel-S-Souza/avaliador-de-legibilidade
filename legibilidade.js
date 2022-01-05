@@ -13,16 +13,13 @@ function readabilityChecker(text) {
     if (text.length > 0) {
         for (let i = 0; i < text.length; i++) {
             if (isAlpha(text[i])){      
-                letters++
-                
+                letters++  
             }
             if (text[i] == " " && isAlpha(text[i + 1])) {
-                words++
-                
+                words++  
             }
             if ((text[i] == "." || text[i] == "!" || text[i] == "?") && (isAlpha(text[i + 1]) || text[i + 1] == " ")) {
-                phrases++
-                
+                phrases++   
             }
         }
         const averageLetters = letters / words * 100

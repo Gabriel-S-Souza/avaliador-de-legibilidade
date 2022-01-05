@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legibilidade</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Legibilidade</title>
 </head>
 <body>
     <main>
         <h1>Avaliador de legibilidade</h1>
+        <h2>Índice de Coleman-Liau</h2>
         <label for="texto">Insira um texto:</label>
-        <textarea type="text área" name="texto"></textarea>
-        <button type="submit">Verificar</button><br>
-        <label for="saida">Nível da escrita:</label>
+        <textarea type="text área" name="texto" placeholder="Quanto maior for o seu texto, maior é a confiabilidade do índice"></textarea>
+        <button type="submit">Verificar</button>
+        <label for="saida">Nível do texto:</label>
         <output name="saida"></output>
     </main>
 

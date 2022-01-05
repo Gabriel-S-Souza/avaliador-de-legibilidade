@@ -1,11 +1,3 @@
-const textArea = document.querySelector('textarea')
-const button = document.querySelector('button')
-const saida = document.querySelector('output')
-button.addEventListener("click", function() {
-    const text = textArea.value
-    saida.textContent = readabilityChecker(text)
-})
-
 function readabilityChecker(text) {
     let letters = 0
     let words = 1
@@ -30,8 +22,7 @@ function readabilityChecker(text) {
 }
 
 function isAlpha(char) {
-    return typeof char === "string" && char.length === 1 && 
-    (char >= "a" && char <= "z" || char >= "A" && char <= "Z" || char === "ç" || char === "Ç")
+    return char.length === 1 &&  /[a-zA-Zà-úÀ-ÚçÇ]/g.test(char)
 }
 
 function converterToSeries(colemanLiauIndex){

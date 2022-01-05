@@ -9,15 +9,14 @@
     <title>Legibilidade</title>
 </head>
 <body>
-    <main>
+    <form oninput="saida.value=readabilityChecker(texto.value)">
         <h1>Avaliador de legibilidade</h1>
         <h2>Índice de Coleman-Liau</h2>
         <label for="texto">Insira um texto:</label>
         <textarea type="text área" name="texto" placeholder="Quanto maior for o seu texto, maior é a confiabilidade do índice"></textarea>
-        <button type="submit">Verificar</button>
         <label for="saida">Nível do texto:</label>
         <output name="saida"></output>
-    </main>
+    </form>
 
     <script src="legibilidade.js"></script>  
 </body>

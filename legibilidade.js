@@ -30,8 +30,7 @@ function readabilityChecker(text) {
 }
 
 function isAlpha(char) {
-    return typeof char === "string" && char.length === 1 && 
-    (char >= "a" && char <= "z" || char >= "A" && char <= "Z" || char === "ç" || char === "Ç")
+    return char.length === 1 &&  /[a-zA-Zà-úÀ-ÚçÇ]/g.test(char)
 }
 
 function converterToSeries(colemanLiauIndex){

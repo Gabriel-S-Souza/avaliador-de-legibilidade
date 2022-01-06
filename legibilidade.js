@@ -14,8 +14,6 @@ function readabilityChecker(text) {
 				phrases++;
 			}
 		}
-		console.log("Words", words);
-		console.log("Phrases", phrases);
 		const averageLetters = (letters / words) * 100;
 		const averagePhrases = (phrases / words) * 100;
 		const colemanLiauIndex =

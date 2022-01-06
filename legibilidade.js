@@ -16,8 +16,7 @@ function readabilityChecker(text) {
 		}
 		const averageLetters = (letters / words) * 100;
 		const averagePhrases = (phrases / words) * 100;
-		const colemanLiauIndex =
-			0.0588 * averageLetters - 0.296 * averagePhrases - 15.8;
+		const colemanLiauIndex = 0.0588 * averageLetters - 0.296 * averagePhrases - 15.8;
 		return converterToSeries(colemanLiauIndex);
 	} else return "";
 }

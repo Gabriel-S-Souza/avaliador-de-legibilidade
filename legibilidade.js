@@ -7,16 +7,15 @@ function readabilityChecker(text) {
 			if (isAlpha(text[i])) {
 				letters++;
 			}
-			if (text[i] == " " && isAlpha(text[i + 1])) {
+			if (isAlpha(text[i]) && text[i - 1] == " ") {
 				words++;
 			}
-			if (
-				(text[i] == "." || text[i] == "!" || text[i] == "?") &&
-				(isAlpha(text[i + 1]) || text[i + 1] == " ")
-			) {
+			if ((isAlpha(text[i]) || text[i] == " ") && (text[i - 1] == "." || text[i - 1] == "!" || text[i - 1] == "?")) {
 				phrases++;
 			}
 		}
+		console.log("Words", words);
+		console.log("Phrases", phrases);
 		const averageLetters = (letters / words) * 100;
 		const averagePhrases = (phrases / words) * 100;
 		const colemanLiauIndex =

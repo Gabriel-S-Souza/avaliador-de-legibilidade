@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
-    <title>Legibilidade</title>
-</head>
-<body>
-    <form oninput="saida.value=readabilityChecker(texto.value)">
-        <h1>Avaliador de legibilidade</h1>
-        <h2>Índice de Coleman-Liau</h2>
-        <label for="texto">Insira um texto:</label>
-        <textarea type="text área" name="texto" placeholder="Quanto maior for o seu texto, maior é a confiabilidade do índice"></textarea>
-        <label for="saida">Nível do texto:</label>
-        <output name="saida"></output>
-    </form>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="reset.css" />
+		<title>Legibilidade</title>
+	</head>
+	<body>
+		<form oninput="saida.value=readabilityChecker(texto.value)">
+			<h1>Avaliador de legibilidade</h1>
+			<h2>Índice de Coleman-Liau</h2>
+			<label for="texto">Insira um texto: </label>
+			<textarea
+				type="text área"
+				name="texto"
+				placeholder="Quanto maior for o seu texto, maior é a confiabilidade do índice"
+			></textarea>
+			<label for="saida">Nível do texto:</label>
+			<output name="saida"> </output>
+		</form>
 
-    <script src="legibilidade.js"></script>  
-</body>
+		<script src="legibilidade.js"></script>
+	</body>
 </html>

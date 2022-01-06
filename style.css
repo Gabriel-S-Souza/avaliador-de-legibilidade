@@ -1,42 +1,43 @@
 html {
-    background-color: #D8E4FF;
+	background-color: #d8e4ff;
 }
 
-html, body{
-    display: flex;
-    height: 100%;
-    flex-direction: column;
+html,
+body {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: auto;
-    padding: 1em;
-    min-height: 26em;
-    background-color: #fff;
-    border: 1px solid #1F271B;
-    border-radius: 8px;
-    font-family: monospace, Courier;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: auto;
+	padding: 1em;
+	min-height: 26em;
+	background-color: #fff;
+	border: 1px solid #1f271b;
+	border-radius: 8px;
+	font-family: monospace, Courier;
 }
 
 label {
-    font-family: "Lucida Console", monospace;
+	font-family: "Lucida Console", monospace;
 }
 
 textarea {
-    height: 10em;
-    width: 26em;
-    padding: 8px;
-    font-family: "Lucida Console", monospace;
+	height: 10em;
+	width: 26em;
+	padding: 8px;
+	font-family: "Lucida Console", monospace;
 }
 
 output {
-    height: 40px;
-    font-size: 20px;
-    font-family: "Lucida Console", monospace;
-    font-weight: bold;
+	height: 40px;
+	font-size: 20px;
+	font-family: "Lucida Console", monospace;
+	font-weight: bold;
 }
